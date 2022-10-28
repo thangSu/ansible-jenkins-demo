@@ -16,7 +16,7 @@
         state: present
     - name: deloy static web
       ansible.builtin.copy:
-        src: web-yen/index.html
+        src: index.html
         dest: /var/www/html/
     - name: restart apache server
       ansible.builtin.service:
