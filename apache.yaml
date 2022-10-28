@@ -15,9 +15,9 @@
         name: git
         state: present
     - name: deloy static web
-        copy:
-          src: web-yen
-          dest: /var/www/html/
+      copy:
+        src: web-yen
+        dest: /var/www/html/
     - name: restart apache server
       ansible.builtin.service:
         name: httpd
