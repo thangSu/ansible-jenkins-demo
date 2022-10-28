@@ -10,9 +10,6 @@ pipeline {
             steps{
                 ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'hosts', playbook: 'apache.yaml'
             }
-        }
-               
-
-        
+        }              
     }
 }
