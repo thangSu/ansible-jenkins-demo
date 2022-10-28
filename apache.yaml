@@ -14,10 +14,10 @@
       yum:
         name: git
         state: present
-    - name: deyloy website from git
-      ansible.builtin.git:
-        repo: https://github.com/thangSu/web-yen.git
-        dest: /var/www/html/
+    - name: deloy static web
+        copy:
+          src: web-yen
+          dest: /var/www/html/
     - name: restart apache server
       ansible.builtin.service:
         name: httpd
